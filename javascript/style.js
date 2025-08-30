@@ -59,15 +59,20 @@ function callingButton() {
 
       // Save call data with timestamp
       const timestamp = new Date().toLocaleTimeString();
-      callData.push({ serviceName, phoneNumber, timestamp });
+      // callData.push({ serviceName, phoneNumber, timestamp });
+      callData.push({
+        serviceName: serviceName,
+        phoneNumber: phoneNumber,
+        timestamp: timestamp,
+      });
 
       // Update UI
-      renderCallHistory();
+      CallHistory();
     });
   }
 }
 
-function renderCallHistory() {
+function CallHistory() {
   const historyContainer = document.getElementById("call-history-list");
   historyContainer.innerHTML = ""; // clear old items
 
@@ -96,7 +101,7 @@ document
   .getElementById("clear-history-btn")
   .addEventListener("click", function () {
     callData = []; // reset the array
-    renderCallHistory(); // refresh UI
+    CallHistory(); // refresh UI
   });
 
 callingButton();
