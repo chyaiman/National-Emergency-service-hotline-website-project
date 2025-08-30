@@ -9,7 +9,8 @@ How do you create and insert a new element into the DOM?
 Answer:
 To create element we use document.createElement("tagName"), to add inner text or inner html we use .innerText and .innerHTML
 What is Event Bubbling and how does it work?
-Answer: If I have a <ul> with many buttons, instead of adding a click listener to each button, I can just add one listener to the <ul>. Because of event bubbling, the click will reach the <ul>.
+Answer: If I have a <ul> with many buttons, instead of adding a click listener to each button, I can just add one listener to the <ul> Because of event bubbling, the click will reach the <ul>
+
 What is Event Delegation in JavaScript? Why is it useful?
 
 Answer: Following the previous question, Because of event bubbling, the click will reach the <ul>, and using event.target I can check which button was clicked. This is called event delegation.
